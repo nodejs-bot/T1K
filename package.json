@@ -1,0 +1,90 @@
+{
+  "name": "k",
+  "version": "1.0.0",
+  "description": "macOS",
+  "main": "k.js",
+  "scripts": {
+    "start": "node k.js",
+    "dev": "node k.js",
+    "test": "node k.js test",
+    "install-deps": "npm install",
+    "setup": "npm install && node k.js",
+    "permissions": "echo 'Please grant accessibility permissions in System Preferences > Security & Privacy > Privacy > Accessibility'",
+    "check-python": "python3 --version",
+    "check-deps": "which python3 && which osascript && which pbpaste"
+  },
+  "keywords": [
+    "macos",
+    "clipboard",
+    "monitor",
+    "tracking",
+    "telegram",
+    "window",
+    "applescript",
+    "python3",
+    "accessibility"
+  ],
+  "author": "Enhanced macOS Monitoring System",
+  "license": "MIT",
+  "dependencies": {
+    "active-win": "^8.2.0"
+  },
+  "optionalDependencies": {
+    "active-win": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "requirements": {
+    "system": {
+      "python3": ">=3.6",
+      "osascript": "required",
+      "pbpaste": "required"
+    },
+    "permissions": {
+      "accessibility": "required for window monitoring",
+      "automation": "required for AppleScript execution"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/macos-enhanced-monitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-repo/macos-enhanced-monitor/issues"
+  },
+  "homepage": "https://github.com/your-repo/macos-enhanced-monitor#readme",
+  "devDependencies": {},
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/your-username"
+  },
+  "macosPermissions": {
+    "accessibility": {
+      "description": "Required for monitoring active windows and applications",
+      "path": "System Preferences > Security & Privacy > Privacy > Accessibility"
+    },
+    "automation": {
+      "description": "Required for AppleScript execution and system events",
+      "path": "System Preferences > Security & Privacy > Privacy > Automation"
+    }
+  },
+  "installation": {
+    "steps": [
+      "1. Install Node.js dependencies: npm install",
+      "2. Ensure Python 3 is installed: python3 --version",
+      "3. Grant Accessibility permissions to Terminal/IDE",
+      "4. Grant Automation permissions if prompted",
+      "5. Run: npm start"
+    ]
+  },
+  "troubleshooting": {
+    "accessibility_denied": "Go to System Preferences > Security & Privacy > Privacy > Accessibility and add your terminal application",
+    "applescript_errors": "Ensure Automation permissions are granted for the running application",
+    "python_missing": "Install Python 3: brew install python3 or download from python.org",
+    "clipboard_issues": "pbpaste command should be available by default on macOS"
+  }
+}
